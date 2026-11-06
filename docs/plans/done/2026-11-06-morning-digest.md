@@ -1,6 +1,6 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
 ---
@@ -77,3 +77,28 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+- [#1: Digest contract: shared rows and reader signature](https://github.com/brolag/mega-s01e04-rig/issues/1)
+- [#2: Run log reader: aggregate jobs without losing malformed nights](https://github.com/brolag/mega-s01e04-rig/issues/2)
+- [#3: Digest page: GET /digest/:night](https://github.com/brolag/mega-s01e04-rig/issues/3)
+- [#4: Digest JSON: GET /api/digest/:night](https://github.com/brolag/mega-s01e04-rig/issues/4)
+- [#5: Status board: link nights to their digests with counts](https://github.com/brolag/mega-s01e04-rig/issues/5)
+- [#6: Digest route tests: success, missing, empty and malformed nights](https://github.com/brolag/mega-s01e04-rig/issues/6)
+- [#7: Publish the digest preview and send it for review](https://github.com/brolag/mega-s01e04-rig/issues/7)
+- [#8: Clean the public preview and archive the completed plan](https://github.com/brolag/mega-s01e04-rig/issues/8)
+
+## Completion evidence
+
+- Implementation merged through [PR #9](https://github.com/brolag/mega-s01e04-rig/pull/9).
+- The course confirmed that the reviewer had seen the marked preview before issue #7 was
+  closed. Review submission alone did not satisfy that gate.
+- After renewed human approval, the same [public preview](https://mega-s01e04-rig-preview-imagine-paradise.vercel.app)
+  was replaced with the page exported with `LANE_MARKER` unset. It returns HTTP 200 and
+  displays "no marker set"; the former lane marker is absent. The superseded marked
+  deployment was deleted, and the same public link was verified again afterward.
+- The replacement preserves the sample's five jobs and one bad line, one inline stylesheet,
+  and no client scripts or external assets.
+- Plan cleanup is complete. Final course acceptance is tracked separately and is not
+  asserted by this archive.
